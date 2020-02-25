@@ -25,22 +25,23 @@ const card1 =(items)=>{
 
   const cardHeadline = document.createElement('div')
   cardHeadline.classList.add('headline')
-  card.appendChild('cardHeadline')
+  card.appendChild(cardHeadline)
 
   const cardAuthor = document.createElement('div')
   cardAuthor.classList.add('author')
-  card.appendChild('cardAuthor')
+  card.appendChild(cardAuthor)
 
   const cardImg = document.createElement('div')
   cardImg.classList.add('img-container')
-  cardAuthor.appendChild('cardImg')
+  cardAuthor.appendChild(cardImg)
 
   const authorsName = document.createElement('span') 
-  cardAuthor.appendChild('authorsName')
+  cardAuthor.appendChild(authorsName)
 
-  headLine.textContent = items.headline;
-    img.src = items.authorPhoto;
-    authorName.textContent = items.authorName;
+  cardHeadline.textContent = items.headline;
+  cardImg.src = items.authorPhoto;
+    authorsName.textContent = items.authorName;
+
 
   return card;
 }
@@ -55,8 +56,8 @@ axios
         theseKeys.forEach(a => {
             response.data.articles[a].forEach(items => {
                 console.log(response.data)
-                const chosenCard = newArticles(items);
-                newsCards.append(chosenCard);
+                const chosenCard = card1(items);
+                newsCards.appendChild(chosenCard);
             })
         })
     })

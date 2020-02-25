@@ -18,15 +18,15 @@ function Header() {
   const headerDate = document.createElement('span')
   headerDate.classList.add('date')
   headerDate.textContent = 'Feb.22.2020'
-  headerDiv.appenChild('headerDate')
+  headerDiv.appendChild(headerDate)
 
   const headerTitle = document.createElement('h1')
   headerTitle.textContent = "Lambda Times"
-  headerDiv.appendChild('h1')
+  headerDiv.appendChild(headerTitle)
 
   const headerTemp = document.createElement('span')
   headerTemp.classList.add('temp')
-  headerDiv.appendChild('headerTemp')
+  headerDiv.appendChild(headerTemp)
   headerTemp.textContent = "98°"
 
 //     headerDiv.append(headerDate, headerTitle, headerTemp);
